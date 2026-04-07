@@ -1,7 +1,7 @@
 import 'dart:math';
 
 /// =====================
-/// PRAKTIK 1 (HEWAN)
+/// PRAKTIK 1
 /// =====================
 class Hewan {
   void bersuara() => print('...');
@@ -23,7 +23,7 @@ class Burung extends Hewan {
 }
 
 /// =====================
-/// PRAKTIK 2 (PEMBAYARAN)
+/// PRAKTIK 2
 /// =====================
 abstract class MetodePembayaran {
   void bayar(double jumlah);
@@ -51,7 +51,7 @@ class Tunai implements MetodePembayaran {
 }
 
 /// =====================
-/// STUDI KASUS (BENTUK)
+/// STUDI KASUS
 /// =====================
 abstract class Bentuk {
   double hitungLuas();
@@ -97,7 +97,7 @@ class Lingkaran implements Bentuk {
 }
 
 /// =====================
-/// LATIHAN (PEKERJA)
+/// LATIHAN 1-3
 /// =====================
 abstract class Pekerja {
   void bekerja();
@@ -110,16 +110,16 @@ class Programmer implements Pekerja {
 
 class Dokter implements Pekerja {
   @override
-  void bekerja() => print('Dokter mengobati pasien');
+  void bekerja() => print('Dokter sedang mengobati pasien');
 }
 
 class Guru implements Pekerja {
   @override
-  void bekerja() => print('Guru mengajar');
+  void bekerja() => print('Guru sedang mengajar');
 }
 
 /// =====================
-/// LATIHAN 4 (TABLET)
+/// LATIHAN 4
 /// =====================
 class Komputer {
   void komputasi() => print('Melakukan komputasi');
@@ -136,10 +136,16 @@ class Telepon {
 class Tablet extends Komputer {
   Kamera kamera = Kamera();
   Telepon teleponFitur = Telepon();
+
+  void gunakanSemuaFitur() {
+    komputasi();
+    kamera.foto();
+    teleponFitur.telepon();
+  }
 }
 
 /// =====================
-/// LATIHAN 5 (MATH UTILS)
+/// LATIHAN 5
 /// =====================
 class MathUtils {
   static int factorial(int n) {
@@ -216,7 +222,7 @@ class VideoPlayer implements MediaPlayer, Playable, Pausable {
 }
 
 /// =====================
-/// MAIN (SEMUA DEMO)
+/// MAIN
 /// =====================
 void main() {
   print("=== PRAKTIK 1 ===");
@@ -241,22 +247,23 @@ void main() {
   p.info();
   l.info();
 
-  print("\n=== LATIHAN 3 ===");
+  print("\n=== LATIHAN 1-3 ===");
   List<Pekerja> pekerja = [Programmer(), Dokter(), Guru()];
   for (var pk in pekerja) {
     pk.bekerja();
   }
 
-  print("\n=== TABLET ===");
+  print("\n=== LATIHAN 4 ===");
   Tablet t = Tablet();
-  t.komputasi();
-  t.kamera.foto();
-  t.teleponFitur.telepon();
+  t.gunakanSemuaFitur();
 
-  print("\n=== MATH UTILS ===");
+  print("\n=== LATIHAN 5 ===");
   print("Factorial 5: ${MathUtils.factorial(5)}");
   print("Is Prime 7: ${MathUtils.isPrime(7)}");
+  print("Round 3.14159 -> 2: ${MathUtils.roundTo(3.14159, 2)}");
+  print("Random Int (1-10): ${MathUtils.randomInt(1, 10)}");
   print("Average: ${MathUtils.average([1,2,3,4])}");
+  print("Median: ${MathUtils.median([1,2,3,4])}");
 
   print("\n=== CHALLENGE ===");
   var audio = AudioPlayer();
