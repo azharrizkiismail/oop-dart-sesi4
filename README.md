@@ -378,13 +378,15 @@ void main() {
 
 # Latihan
 
-## Latihan 1
+## Latihan 1-3
 
 ```dart
+// 1. Abstract class Pekerja
 abstract class Pekerja {
   void bekerja();
 }
 
+// 2. Implementasi class
 class Programmer implements Pekerja {
   @override
   void bekerja() {
@@ -405,46 +407,16 @@ class Guru implements Pekerja {
     print('Guru sedang mengajar');
   }
 }
-```
 
----
-
-## Latihan 2
-
-```dart
-class Programmer implements Pekerja {
-  @override
-  void bekerja() {
-    print('Programmer sedang coding');
-  }
-}
-
-class Dokter implements Pekerja {
-  @override
-  void bekerja() {
-    print('Dokter sedang mengobati pasien');
-  }
-}
-
-class Guru implements Pekerja {
-  @override
-  void bekerja() {
-    print('Guru sedang mengajar');
-  }
-}
-```
-
----
-
-## Latihan 3
-
-```dart
+// 3. Demonstrasi Polimorfisme
 void main() {
   List<Pekerja> daftarPekerja = [
     Programmer(),
     Dokter(),
     Guru(),
   ];
+
+  print('=== Demonstrasi Polimorfisme Pekerja ===');
 
   for (var pekerja in daftarPekerja) {
     pekerja.bekerja();
@@ -457,6 +429,7 @@ void main() {
 ## Latihan 4
 
 ```dart
+// Class dasar
 class Komputer {
   void komputasi() => print('Melakukan komputasi');
 }
@@ -469,9 +442,24 @@ class Telepon {
   void telepon() => print('Melakukan panggilan');
 }
 
+// Tablet mewarisi Komputer dan memiliki Kamera & Telepon
 class Tablet extends Komputer {
   Kamera kamera = Kamera();
   Telepon teleponFitur = Telepon();
+
+  void gunakanSemuaFitur() {
+    komputasi();
+    kamera.foto();
+    teleponFitur.telepon();
+  }
+}
+
+// MAIN
+void main() {
+  Tablet tablet = Tablet();
+
+  print('=== Fitur Tablet ===');
+  tablet.gunakanSemuaFitur();
 }
 ```
 
@@ -483,11 +471,13 @@ class Tablet extends Komputer {
 import 'dart:math';
 
 class MathUtils {
+  // Factorial
   static int factorial(int n) {
     if (n <= 1) return 1;
     return n * factorial(n - 1);
   }
 
+  // Cek bilangan prima
   static bool isPrime(int n) {
     if (n < 2) return false;
     for (int i = 2; i <= sqrt(n); i++) {
@@ -496,23 +486,28 @@ class MathUtils {
     return true;
   }
 
+  // Pembulatan desimal
   static double roundTo(double value, int decimal) {
     double mod = pow(10, decimal).toDouble();
     return (value * mod).round() / mod;
   }
 
+  // Random integer
   static int randomInt(int min, int max) {
     return min + Random().nextInt(max - min + 1);
   }
 
+  // Random double
   static double randomDouble(double min, double max) {
     return min + Random().nextDouble() * (max - min);
   }
 
+  // Rata-rata
   static double average(List<num> list) {
     return list.reduce((a, b) => a + b) / list.length;
   }
 
+  // Median
   static double median(List<num> list) {
     var sorted = List<num>.from(list)..sort();
     int mid = sorted.length ~/ 2;
@@ -523,6 +518,22 @@ class MathUtils {
       return sorted[mid].toDouble();
     }
   }
+}
+
+// MAIN
+void main() {
+  print('=== MathUtils Demo ===');
+
+  print('Factorial 5: ${MathUtils.factorial(5)}');
+  print('Is 7 prime? ${MathUtils.isPrime(7)}');
+  print('Round 3.14159 -> 2 decimal: ${MathUtils.roundTo(3.14159, 2)}');
+
+  print('Random Int (1-10): ${MathUtils.randomInt(1, 10)}');
+  print('Random Double (1-5): ${MathUtils.randomDouble(1, 5)}');
+
+  List<num> data = [1, 2, 3, 4, 5];
+  print('Average: ${MathUtils.average(data)}');
+  print('Median: ${MathUtils.median(data)}');
 }
 ```
 
