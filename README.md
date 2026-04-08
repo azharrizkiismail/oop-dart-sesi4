@@ -47,6 +47,8 @@ void main() {
   h.bersuara(); // Output: Meong
 }
 ```
+<img width="1872" height="941" alt="1" src="https://github.com/user-attachments/assets/51f5bcd2-ab9e-42f1-83f6-a51d378cd464" />
+
 
 ## Polimorfisme dengan Inheritance
 
@@ -77,6 +79,8 @@ void main() {
   bentuk2.gambar();
 }
 ```
+<img width="1873" height="943" alt="2" src="https://github.com/user-attachments/assets/d5d2631b-33c6-485a-8207-c9a31d9382a9" />
+
 
 ## Operator is dan as
 
@@ -102,6 +106,8 @@ void main() {
   (k as Mobil?)?.klakson();
 }
 ```
+<img width="1871" height="941" alt="3" src="https://github.com/user-attachments/assets/ad598318-4353-4cea-8a20-34f4bd076269" />
+
 
 ---
 
@@ -141,6 +147,8 @@ void main() {
   m.stop();
 }
 ```
+<img width="1875" height="942" alt="4" src="https://github.com/user-attachments/assets/943a6856-ac7f-40ad-96b4-c753eacb6c27" />
+
 
 ## Abstract Method
 
@@ -165,6 +173,8 @@ void main() {
   gitar.mainkan();
 }
 ```
+<img width="1875" height="941" alt="5" src="https://github.com/user-attachments/assets/5b0e49cb-61c3-4235-a4ad-fda9b7a76ca4" />
+
 
 ## Interface
 
@@ -199,6 +209,8 @@ void main() {
   p.terbang();
 }
 ```
+<img width="1874" height="940" alt="6" src="https://github.com/user-attachments/assets/e90aefcf-c084-4815-9b49-babfd92668fa" />
+
 
 ## Static Members and Method
 
@@ -220,6 +232,8 @@ void main() {
   print('Hasil penjumlahan: ${MathUtils.add(10, 20)}');
 }
 ```
+<img width="1871" height="937" alt="7" src="https://github.com/user-attachments/assets/b06490ce-1228-424b-b7fd-d8bd032a2242" />
+
 
 ---
 
@@ -269,6 +283,8 @@ void main() {
   }
 }
 ```
+<img width="1869" height="939" alt="8" src="https://github.com/user-attachments/assets/61e82348-b638-43b3-9dd3-e7f1f26eaf09" />
+
 
 ---
 
@@ -314,6 +330,8 @@ void main() {
   }
 }
 ```
+<img width="1874" height="942" alt="9" src="https://github.com/user-attachments/assets/a410f84f-b486-49fd-a915-79e7d78757b9" />
+
 
 ---
 
@@ -373,6 +391,8 @@ void main() {
   l.info();
 }
 ```
+<img width="1870" height="941" alt="10" src="https://github.com/user-attachments/assets/1d9e2288-0258-4830-934a-4f5129ad2da1" />
+
 
 ---
 
@@ -423,6 +443,8 @@ void main() {
   }
 }
 ```
+<img width="1875" height="940" alt="11" src="https://github.com/user-attachments/assets/751c19bd-9824-402d-a70d-d0c4d546cc69" />
+
 
 ---
 
@@ -462,6 +484,8 @@ void main() {
   tablet.gunakanSemuaFitur();
 }
 ```
+<img width="1872" height="942" alt="12" src="https://github.com/user-attachments/assets/a681f396-6091-44b3-ab3e-e20250cb61b2" />
+
 
 ---
 
@@ -536,6 +560,8 @@ void main() {
   print('Median: ${MathUtils.median(data)}');
 }
 ```
+<img width="1872" height="940" alt="13" src="https://github.com/user-attachments/assets/e34bb78f-561d-4997-806c-a02573a10ed1" />
+
 
 ---
 
@@ -589,3 +615,5 @@ void main() {
   video.pause();
 }
 ```
+<img width="1872" height="943" alt="14" src="https://github.com/user-attachments/assets/88857bc6-ed76-47a9-9463-a83daceeb4c3" />
+
